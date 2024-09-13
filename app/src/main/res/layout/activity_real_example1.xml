@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.rekoj134.observerpatterndemo.real_ex_1.RealExample1ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".real_ex_1.RealExample1Activity">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/btnChange1"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_btn_change"
+            android:backgroundTint="#F44747"
+            app:layout_constraintEnd_toStartOf="@id/btnChange2"
+            android:contentDescription="@null"
+            android:padding="12dp"
+            android:src="@drawable/refresh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnChange2"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_btn_change"
+            android:backgroundTint="#47F450"
+            android:contentDescription="@null"
+            android:padding="12dp"
+            android:src="@drawable/refresh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnChange3"
+            app:layout_constraintStart_toEndOf="@id/btnChange1" />
+
+        <ImageView
+            android:id="@+id/btnChange3"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_btn_change"
+            android:backgroundTint="#C047F4"
+            android:contentDescription="@null"
+            android:padding="12dp"
+            android:src="@drawable/refresh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnChange2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
